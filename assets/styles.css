@@ -1,0 +1,278 @@
+/* General Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #000;
+}
+
+nav {
+    background-color: #000;
+    padding: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+main {
+    flex: 1;
+}
+
+.hero, .about-us, .services, .signin, .contact {
+    text-align: center;
+    padding: 20px;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Specific Sections */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background: url('assets/images/hero.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.services .service {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label, form input, form textarea, form button {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #494949;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #303030;
+}
+
+/* Custom File Input */
+.custom-file-input {
+    display: none;
+}
+
+.custom-file-label {
+    padding: 10px;
+    background-color: #494949;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.custom-file-label:hover {
+    background-color: #303030;
+}
+
+/* Social Buttons */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-buttons a {
+    display: inline-block;
+    margin: 0 10px;
+    width: 60px;
+    height: 60px;
+}
+
+.social-buttons a img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .services .service {
+        height: 100%;
+        margin: 10px 0;
+    }
+}
+
+.ceo-picture {
+    border-radius: 50%;
+}
+
+.service-pic {
+    border-radius: 10%;
+    width: 75%;
+}
+
+a {
+    color: white;
+}
+
+/* Contact Page Styles */
+.contact {
+    text-align: center;
+    padding: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact form label, .contact form input, .contact form textarea, .contact form button {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+}
+
+.contact form input, .contact form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+.contact form input::placeholder, .contact form textarea::placeholder {
+    color: #aaa;
+}
+
+.contact form button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact form button:hover {
+    background-color: #218838;
+}
+
+.contact-info {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-info h2 {
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact form label, .contact form input, .contact form textarea, .contact form button, .contact-info {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Service Detail Styles */
+.service-detail {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: white;
+}
+
+.service-detail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10%;
+    margin-bottom: 20px;
+}
+
+.service-detail ul, .service-detail ol {
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.service-detail a {
+    color: #28a745;
+    text-decoration: none;
+}
+
+.service-detail a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .service-detail ul, .service-detail ol {
+        width: 100%;
+        padding: 0 20px;
+    }
+}

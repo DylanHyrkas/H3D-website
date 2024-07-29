@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business - Contact</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" href="assets/images/H3D.ico">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact">
+            <h1>Contact Us</h1>
+            <p>If you have any questions, feel free to reach out to us using the form below.</p>
+            <form id="contactForm" action="contact.php" method="post" enctype="multipart/form-data">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <input type="file" id="file" name="file" class="custom-file-input">
+                <label for="file" class="custom-file-label">Choose file</label>
+                
+                <button type="submit" class="send-button">Send</button>
+            </form>
+            <div class="social-buttons">
+                <a href="https://github.com/DylanHyrkas" target="_blank">
+                    <img src="assets/icons/github.ico" alt="GitHub">
+                </a>
+                <a href="#" id="emailButton">
+                    <img src="assets/icons/email.ico" alt="Email">
+                </a>
+            </div>
+            <div class="contact-info">
+                <h2>Our Contact Information</h2>
+                <p>Email: dylhyrkas@gmail.com</p>
+                <p>Phone: +1 (906) 369 3249</p>
+                <p>30152 Woodbush Rd, Calumet, Michigan 49913</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Dylan Hyrkas - Creative Entrepreneur</p>
+        <p>30152 Woodbush Rd, Calumet, Michigan 49913</p>
+        <p>dylhyrkas@gmail.com | +1 (906) 369 3249</p>
+    </footer>
+    <script>
+        document.querySelector('.custom-file-label').addEventListener('click', function() {
+            document.querySelector('.custom-file-input').click();
+        });
+        document.querySelector('.custom-file-input').addEventListener('change', function() {
+            document.querySelector('.custom-file-label').textContent = this.files[0].name;
+        });
+
+        document.getElementById('emailButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('contactForm').submit();
+        });
+    </script>
+</body>
+</html>
